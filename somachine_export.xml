@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<pou xmlns="http://www.plcopen.org/xml/tc6_0200">
+    <body>
+        <LD>i want to control two motor with security lock</LD>
+        <ST>**Rung 001**
+|       M1_START    M2_START    LOCK1_R   LOCK2_R|
+|       PB1       PB2       PB1       PB2|
+|         BIT 2.0   BIT 2.1   BIT 2.0   BIT 2.1|
+|--------------------------------------------------|
+
+**Rung 002**
+|        LOCK1_F    LOCK2_F     M1_STOP    M2_STOP|
+|        PB3       PB4       PB5       PB6|
+|         BIT 2.2   BIT 2.3   BIT 2.4   BIT 2.5|
+|--------------------------------------------------|</ST>
+    </body>
+</pou>
